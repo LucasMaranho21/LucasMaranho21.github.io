@@ -1,2 +1,2 @@
 # LucasMaranho21.github.io
-My websiite | Dev
+My website | Dev
