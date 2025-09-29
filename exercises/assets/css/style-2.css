@@ -98,6 +98,7 @@ h1 {
     font-size: var(--fs-xxxl);
     margin-top: 32px;
     line-height: 1.2;
+    font-family: var(--font-serif);
 }
 
 h2 {
@@ -105,11 +106,13 @@ h2 {
     line-height: 1.2;
     margin-top: 48px; 
     margin-bottom: 6px;
+    font-family: var(--font-serif);
 }
 
 p {
 	font-size: var(--fs-base);
     line-height: 1.7;
 	margin-bottom: 12px;
+    font-family: var(--font-sans);
 }
 
