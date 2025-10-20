@@ -276,8 +276,6 @@ h1, h2, h2 { color: var(--green-700) }
 
 section *:last-child { margin-bottom: 0 !important }
 
-body { font-family: var(--font-sans) }
-
 
 /* Main heading */
 h1 {
@@ -286,14 +284,16 @@ h1 {
     line-height: 1.1;    
     margin-bottom: 30px;
     text-align: center;
-    letter-spacing: -2px
+    letter-spacing: -2px;
+    font-family: "Oswald", sans-serif;
 }
 
 header p { 
     font-size: var(--fs-md);
     color: var(--green-900) ;
-    text-align: center;
-    font-weight:bold
+    text-align: left;
+    font-weight:bold;
+    font-family: "Lato", sans-serif;
 }
 
 /* Small headings */
@@ -303,6 +303,7 @@ h2 {
     line-height: 1.2;    
     margin-top: 42px;
     margin-bottom: 14px;
+    font-family: "Oswald", sans-serif;
 }
 
 section h2:nth-child(1) { margin-top: 0 }
@@ -313,6 +314,8 @@ p {
     color: #000;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-family: "Lato", sans-serif;
+    text-align: center;
 }
 
 img {
@@ -325,4 +328,22 @@ img {
     color: white;
     padding: 3px 12px 6px 12px;
     width: fit-content;
+}
+
+/* ======== HYPERLINKS ======== */
+a:link, a:visited {
+    color: var(--green-800); 
+    transition: all 0.3s ease;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--green-800);
+    text-underline-offset: 6px;
+    
+}
+
+a:hover, a:focus, a:active {
+    color: var(--rose-600);
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--rose-600);
+    text-underline-offset: 6px;
+    text-align: left;
 }
