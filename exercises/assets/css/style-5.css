@@ -290,7 +290,7 @@ h1 {
 
 header p { 
     font-size: var(--fs-md);
-    color: var(--green-900) ;
+    color: var(--gre/en-900) ;
     text-align: left;
     font-weight:bold;
     font-family: "Lato", sans-serif;
