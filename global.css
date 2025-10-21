@@ -1,0 +1,274 @@
+/*  ============= WEB BROWSER RESETS ============ */
+* { margin: 0; padding: 0; border: none }
+*, *::before, *::after { box-sizing: border-box }
+html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
+scroll-behavior: smooth; scroll-padding-top: 20px }
+body { line-height: 1.5; min-height: 100vh }
+img { width: 100%; height: auto }
+@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
+@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
+
+
+/* ============ CUSTOM PROPERTIES ============  */
+
+:root {
+
+    /* Alternatives to default sans-serif font */
+    --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+
+     /* Alternatives to default serif font */
+    --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+
+     /* Alternatives to default monospace font */
+    --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Fluid font size scale */
+    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+
+}
+
+/*  ============== LAYOUT FOR CONTENT CONTAINERS ================= */
+
+nav, header, section, footer { position: relative; display: block }
+header, section, footer { margin-left: auto; margin-right: auto; overflow: hidden }
+/* Under last content item, zero the bottom margin */
+section > *:last-child { margin-bottom: 0 !important }
+
+/*  ====================== HEADER ======================== */
+
+/* Padding around content: laptops / desktops  */
+@media (min-width: 768px) {
+    header { 
+        padding-top: 3%; 
+        padding-right: 10%;
+        padding-bottom: 0%;
+        padding-left: 20%
+    }
+}
+                        
+/* Padding around content: mobiles */
+@media (max-width: 767px) {
+    header { 
+        padding-top: 5%;
+        padding-right: 5%;
+        padding-bottom: 0%;
+        padding-left: 5%
+    }
+}
+
+/*  ====================== SECTIONS ======================== */
+
+/* Padding around content: laptops / desktops */
+@media (min-width: 768px) {
+    section { 
+        padding-top: 4%;
+        padding-right: 20%;
+        padding-bottom: 4%;
+        padding-left: 20%
+    }
+}
+                        
+/* Padding around content: mobiles */
+@media (max-width: 767px) {
+    section { 
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        padding-left: 5% }
+}
+
+/* Maximum width of any section */
+section { max-width: 1920px }
+/* Maximum width for contents of any section */
+section > * { max-width: 1600px }
+
+/* When content width < viewport width, equalise spacing at left and right */
+section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
+
+/* ============= TYPOGRAPHY ============ */
+
+
+
+body { background-color: lightgreen; }
+
+h1 {
+    font-size: var(--fs-xxxl);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: var(--fs-xl);
+    line-height: 1.2;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    
+    
+}
+
+h3 {
+    font-size: var(--fs-lg);
+    margin-top: 48px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+p {
+	font-size: var(--fs-md);
+    line-height: 1.7;
+	margin-bottom: 12px;
+}
+
+a {color: darkgreen; }
+
+body {font-family: var(--font-sans); text-align:center;}
+
+
+/* Base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+:root{
+  --fg: #ffffff;
+  --bg: #0b0f1a;
+  --overlay: rgba(0,0,0,0.45);
+  --maxw: 1100px;
+  --anim-duration: 900ms;
+  --anim-delay: 120ms;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 62vh;              /* tweak as you like */
+  display: grid;
+  place-items: center;
+  overflow: clip;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.50) 0%,
+    rgba(0,0,0,0.25) 40%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, var(--maxw));
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem 0;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp var(--anim-duration) ease-out forwards;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.125rem, 2.6vw, 1.5rem);
+  font-weight: 500;
+  color: #e6e6e6;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp var(--anim-duration) ease-out forwards;
+  animation-delay: var(--anim-delay);
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MAIN SECTION — responsive padding on the section ONLY */
+main > section {
+  width: min(92vw, var(--maxw));
+  margin: 0 auto;
+  padding: 2rem 0; /* default */
+}
+
+@media (min-width: 768px) {
+  main > section { padding: 3rem 0; }
+}
+@media (min-width: 1200px) {
+  main > section { padding: 4rem 0; }
+}
+
+/* Links list */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #e8efff;
+  background: rgba(255,255,255,0.06);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.links a:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.12);
+}
+
+/* Optional: intro image styling */
+.intro-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 1rem 0;
+}
+
