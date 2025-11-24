@@ -11,9 +11,9 @@ footer.theme-dark   { background-color: #0f172a }
 
 
 
-header .col-text h2, .col-1 > h3 { line-height: 1.8 }
+/* Reduce spacing between stacked H2s in the header */
+header .col-text h2 { line-height: 1.5; margin: 1.5; }
+/* Slightly tighter spacing for section intro H3s */
+.col-1 > h3 { line-height: 1.5; }
 
 
-
-    <!-- Styles for Cookie Consent Popup Message  -->
-    <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">

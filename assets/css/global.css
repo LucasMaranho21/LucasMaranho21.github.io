@@ -84,7 +84,7 @@ h1 {
 
 h2 {
     font-size: var(--fs-xl);
-    line-height: 1.2;
+    line-height: 2;
     margin-top: 32px;
     margin-bottom: 16px;
     font-weight: normal;
