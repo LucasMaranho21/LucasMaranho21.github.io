@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Meetup 2025 — Event Landing Page</title>
+  <meta name="description" content="Join our tech meetup for talks, workshops, and networking. View schedule and speakers and grab your free ticket." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Optional: tweak Tailwind via CDN
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+  <!-- Skip Link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-3 focus:py-2 focus:bg-white focus:rounded-md focus:ring-2 focus:ring-indigo-600">Skip to content</a>
+
+  <!-- Header / Nav (Sticky) -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 font-semibold tracking-tight hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"/></svg>
+          <span>Tech Meetup</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6 text-[15px]">
+          <a href="#schedule" class="hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded transition">Schedule</a>
+          <a href="#speakers" class="hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded transition">Speakers</a>
+          <a href="#venue" class="hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded transition">Venue</a>
+          <a href="#faq" class="hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 rounded transition">FAQ</a>
+          <a href="#tickets" class="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-white font-medium shadow-sm transition hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Get Tickets</a>
+        </nav>
+
+        <!-- Mobile Nav (no JS details/summary) -->
+        <details class="md:hidden group relative">
+          <summary class="list-none inline-flex items-center justify-center h-9 w-9 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 cursor-pointer" aria-label="Open menu">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </summary>
+          <div class="absolute right-0 mt-2 w-56 rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+            <a href="#schedule" class="block rounded px-3 py-2 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Schedule</a>
+            <a href="#speakers" class="block rounded px-3 py-2 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Speakers</a>
+            <a href="#venue" class="block rounded px-3 py-2 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Venue</a>
+            <a href="#faq" class="block rounded px-3 py-2 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">FAQ</a>
+            <a href="#tickets" class="mt-1 block rounded-lg bg-indigo-600 px-3 py-2 text-center font-medium text-white hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Get Tickets</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700">In-person & livestream • 10 Dec 2025</span>
+          <h1 class="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">Build. Ship. Share.<br class="hidden sm:block"/> The Tech Meetup for Makers.</h1>
+          <p class="mt-4 text-lg text-gray-600">One evening of lightning talks, hands-on demos, and friendly networking. Learn from engineers, designers, and founders who are shipping delightful products.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a id="tickets" href="#" class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-5 py-3 text-white font-semibold shadow transition hover:-translate-y-0.5 hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">
+              Reserve your spot
+              <svg class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#schedule" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3 font-semibold text-gray-900 shadow-sm transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">See schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Schedule</h2>
+            <p class="mt-2 text-gray-600">Doors open 17:30 • Talks start 18:15 • Networking from 20:30</p>
+          </div>
+          <a href="#" class="hidden sm:inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Add to Calendar</a>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <!-- Left Column -->
+          <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <span class="inline-flex h-8 items-center rounded-md bg-gray-100 px-3 font-medium text-gray-700">17:30</span>
+              <span>Registration & Check-in</span>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold">Welcome & Icebreaker</h3>
+            <p class="mt-1 text-gray-600">Grab a badge, say hello, and meet fellow builders over refreshments.</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <span class="inline-flex h-8 items-center rounded-md bg-gray-100 px-3 font-medium text-gray-700">18:15</span>
+              <span>Lightning Talks I</span>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold">From Idea to MVP in 30 Days</h3>
+            <p class="mt-1 text-gray-600">Rapid prototyping strategies for small teams shipping fast.</p>
+          </article>
+
+          <!-- Right Column -->
+          <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <span class="inline-flex h-8 items-center rounded-md bg-gray-100 px-3 font-medium text-gray-700">19:00</span>
+              <span>Live Demo</span>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold">Edge Functions in Production</h3>
+            <p class="mt-1 text-gray-600">Deploying serverless at the edge for snappy UX and lower costs.</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <span class="inline-flex h-8 items-center rounded-md bg-gray-100 px-3 font-medium text-gray-700">20:30</span>
+              <span>Networking</span>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold">Snacks, Drinks & Hiring Corner</h3>
+            <p class="mt-1 text-gray-600">Chat with speakers and sponsors; swap ideas and roles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speakers -->
+    <section id="speakers" class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-end sm:justify-between">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Speakers</h2>
+            <p class="mt-2 text-gray-600">A mix of engineers, designers, and founders sharing the goods.</p>
+          </div>
+          <a href="#" class="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 sm:mt-0">Become a speaker</a>
+        </div>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Speaker Card -->
+          <article class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-indigo-600">
+            <div class="aspect-[16/9] w-full overflow-hidden rounded-xl bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop" alt="Portrait of speaker" class="h-full w-full object-cover transition group-hover:scale-[1.03]"/>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold">Alex Chen</h3>
+            <p class="text-gray-600">Staff Engineer @ EdgeWorks</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-indigo-50 text-indigo-700 text-xs px-3 py-1">Edge • Serverless</span>
+              <span class="rounded-full bg-gray-100 text-gray-700 text-xs px-3 py-1">Live Demo</span>
+            </div>
+            <a href="#" class="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Details</a>
+          </article>
+
+          <article class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-indigo-600">
+            <div class="aspect-[16/9] w-full overflow-hidden rounded-xl bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1200&auto=format&fit=crop" alt="Portrait of speaker" class="h-full w-full object-cover transition group-hover:scale-[1.03]"/>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold">Priya Raman</h3>
+            <p class="text-gray-600">Design Lead @ Lumi</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-indigo-50 text-indigo-700 text-xs px-3 py-1">Design Systems</span>
+              <span class="rounded-full bg-gray-100 text-gray-700 text-xs px-3 py-1">Accessibility</span>
+            </div>
+            <a href="#" class="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Details</a>
+          </article>
+
+          <article class="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-indigo-600">
+            <div class="aspect-[16/9] w-full overflow-hidden rounded-xl bg-gray-100">
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1200&auto=format&fit=crop" alt="Portrait of speaker" class="h-full w-full object-cover transition group-hover:scale-[1.03]"/>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold">María Gómez</h3>
+            <p class="text-gray-600">Founder @ LaunchKit</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-indigo-50 text-indigo-700 text-xs px-3 py-1">Startups</span>
+              <span class="rounded-full bg-gray-100 text-gray-700 text-xs px-3 py-1">Hiring</span>
+            </div>
+            <a href="#" class="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue / CTA band -->
+    <section id="venue" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Venue</h2>
+            <p class="mt-2 text-gray-600">Pixel Hall, 42 Makers Lane, Dublin 2 • Accessible • Nearby transit</p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="#" class="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-white font-medium shadow-sm transition hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">View on Maps</a>
+              <a href="#faq" class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 font-medium hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">Accessibility info</a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-gray-200 bg-gray-100 aspect-video"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (simple) -->
+    <section id="faq" class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <div class="rounded-xl border border-gray-200 bg-white p-5">
+            <h3 class="font-semibold">Is it free?</h3>
+            <p class="mt-2 text-gray-600">Yes! Thanks to our sponsors, tickets are free but limited. Please register.</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5">
+            <h3 class="font-semibold">Will talks be recorded?</h3>
+            <p class="mt-2 text-gray-600">We stream live and publish recordings after the event.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <p class="text-sm text-gray-600">© 2025 Tech Meetup. All rights reserved.</p>
+        <nav class="flex items-center gap-4">
+          <a href="#" class="inline-flex items-center gap-2 rounded px-2 py-1 text-sm hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.75c-.77.35-1.6.58-2.46.69a4.29 4.29 0 0 0-7.3 3.92A12.16 12.16 0 0 1 3.16 4.86a4.28 4.28 0 0 0 1.33 5.72c-.63-.02-1.22-.2-1.73-.48v.05a4.3 4.3 0 0 0 3.45 4.2c-.5.14-1.03.16-1.54.06a4.3 4.3 0 0 0 4.01 2.98A8.6 8.6 0 0 1 2 19.54a12.14 12.14 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.18 0-.36-.01-.54.84-.6 1.57-1.35 2.15-2.21Z"/></svg>
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 rounded px-2 py-1 text-sm hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.52c0-1.32-.02-3.02-1.84-3.02-1.84 0-2.12 1.43-2.12 2.92v5.62H9.39V9h3.41v1.56h.05c.47-.9 1.62-1.84 3.33-1.84 3.56 0 4.22 2.34 4.22 5.38v6.35ZM5.34 7.39c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.06 2.06-2.06s2.06.92 2.06 2.06c0 1.13-.92 2.06-2.06 2.06Zm1.78 13.06H3.56V9h3.56v11.45Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 rounded px-2 py-1 text-sm hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1.9 14.6c-.25.06-.34-.11-.34-.24v-1.37c0-.47-.17-.78-.37-.93 1.23-.14 2.52-.6 2.52-2.74 0-.6-.21-1.1-.56-1.49.06-.14.24-.7-.05-1.46 0 0-.46-.15-1.5.57-.44-.12-.9-.18-1.36-.18-.46 0-.92.06-1.36.18-1.04-.72-1.5-.57-1.5-.57-.3.76-.11 1.32-.05 1.46-.35.39-.56.9-.56 1.5 0 2.13 1.29 2.59 2.52 2.73-.16.14-.3.4-.35.76-.32.14-1.13.39-1.63-.47 0 0-.3-.54-.87-.58 0 0-.56 0-.04.35 0 0 .38.18.64.84 0 0 .34 1.16 1.96.78v1.24c0 .13-.09.3-.34.24A4.69 4.69 0 1 1 16.69 12a4.69 4.69 0 0 1-2.79 4.6Z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
