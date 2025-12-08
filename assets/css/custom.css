@@ -1,20 +1,48 @@
+/* Add your custom CSS here */
 
-nav.theme-dark, nav.theme-dark ul.links-wrapper.active { background-color: #0f172a }
+body { font-family: 'Outfit', sans-serif; }
+header h1 {font-size: var(--font-size-xxxl); }
 
-header.theme-dark   { background-color: #0f172a }
-
-header.theme-dark  h1 { color: var(--sky-400); }
-
-section.theme-dark   { background-color: #0f172a }
-
-footer.theme-dark   { background-color: #0f172a }
-
+/* Section 1
+.section-selector-1 > .badge span { background-color: var(--trend-700) }
+.section-selector-1 > .badge span { color: var(--white-000) }
+.section-selector-1 { background-color: var(--trend-700) }
+.section-selector-1 > badge span {text-transform: uppercase;}
 
 
-/* Reduce spacing between stacked H2s in the header */
-header .col-text h2 { line-height: 1.5; margin: 1.5; }
-/* Slightly tighter spacing for section intro H3s */
-.col-1 > h3 { line-height: 1.5; }
+/*Section 2*/
+/* .section-selector-2 { background-color: var(--trend-800) } */
 
+
+/*Section 3*/
+/* .section-selector-3 { background-color: var(--trend-700) } */
+
+
+/*Section 4*/
+/* .section-selector-4.theme-dark { background-color: var(--trend-700) }
+.section-selector-4 div[class^='flex-cols-'] div[class^='col-'] figure.icon { color: var(--blue-300) } */
+
+/* .section-selector-1 h2,
+.section-selector-2 h2,
+.section-selector-3 h2,
+.section-selector-4 h2 {font-weight: 400 } */
+
+
+.section-selector-2,
+.section-selector-4{
+    background: linear-gradient(to bottom left, #0a0f2c, #1a2b6d 60%, #5a3dd1);
+}
+
+
+.section-selector-1,
+.section-selector-3,
+.section-selector-5 {
+    background: linear-gradient(to bottom left, #19071a, #5b1fa6 50%, #c018d1);
+}
+
+/* Forçar ícones brancos na seção 5 */
+.section-selector-5 .icon i {
+    color: #ffffff !important;
+}
 
 
